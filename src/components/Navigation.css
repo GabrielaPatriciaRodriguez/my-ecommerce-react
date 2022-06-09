@@ -1,6 +1,8 @@
 nav {
     background-color: whitesmoke;
     padding: 2px;
+    display: flex;
+    justify-content: space-evenly;
   }
   
   ul {
@@ -15,4 +17,6 @@ nav {
   a {
     text-decoration: none;
     color: rgb(3, 3, 29);
+    padding: 20px;
   }
+

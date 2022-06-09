@@ -4,12 +4,13 @@ import "./App.css";
 
 import Navigation from "./components/Navigation";
 
+import ItemListContainer from "./components/ItemListContainer";
+
 function App (){
     return (
       <div className="App">
         <Navigation />
-        <h1>Mi tiendaVirtual</h1>
-        <p>Gabriela P. Rodriguez</p>
+        <ItemListContainer greetings="Bienvenidos a mi ecommerce" />
       </div>
     );
 }

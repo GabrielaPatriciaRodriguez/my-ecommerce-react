@@ -1,5 +1,8 @@
 import "./Navigation.css";
 
+import CartWidget from "../components/CartWidget";
+
+
 const Navigation = () => {
   return (
     <nav>
@@ -20,6 +23,9 @@ const Navigation = () => {
           <a href="#">Niña</a>
         </li>
       </ul>
+      <div>
+      <CartWidget />
+      </div>
     </nav>
   );
 };
