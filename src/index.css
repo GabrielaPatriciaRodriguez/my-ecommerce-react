@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://res.cloudinary.com/gabycoderhouse/image/upload/v1654732999/EcommerceReact/pexels-andrea-piacquadio-3756042_odsyif.jpg);
+  background-size: cover;
 }
 
 code {

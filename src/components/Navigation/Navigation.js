@@ -1,6 +1,6 @@
 import "./Navigation.css";
 
-import CartWidget from "../components/CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 
 
 const Navigation = () => {
@@ -8,19 +8,19 @@ const Navigation = () => {
     <nav>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <a href="#/">Home</a>
         </li>
         <li>
-          <a href="#">Hombre</a>
+          <a href="#/">Hombre</a>
         </li>
         <li>
-          <a href="#">Mujer</a>
+          <a href="#/">Mujer</a>
         </li>
         <li>
-          <a href="#">Niño</a>
+          <a href="#/">Niño</a>
         </li>
         <li>
-          <a href="#">Niña</a>
+          <a href="#/">Niña</a>
         </li>
       </ul>
       <div>
