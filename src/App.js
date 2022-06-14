@@ -16,15 +16,15 @@ function App() {
  const productos = [
   {
     name: "producto 1",
-    stock: 20,
+    stock: 10,
   },
   {
     name: "producto 2",
-    stock: 30,
+    stock: 8,
   },
   {
     name: "producto 3",
-    stock: 15,
+    stock: 12,
   }
  ]
 
