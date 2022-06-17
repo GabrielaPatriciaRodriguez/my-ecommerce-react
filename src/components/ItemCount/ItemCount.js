@@ -14,7 +14,7 @@ const ItemCount = ({initial, stock}) => {
   };
 
   const restar = () => {
-    if (count > 0) {
+    if (count > initial) {
       setCount(count - 1);
     }
   };
