@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-
-const ItemCount = ({initial, stock}) => {
-
+const ItemCount = ({ initial, stock }) => {
   const [count, setCount] = useState(initial);
 
   const sumar = () => {
@@ -22,13 +20,13 @@ const ItemCount = ({initial, stock}) => {
   return (
     <div>
       <p>{count}</p>
-        <div>  
-          <button onClick={sumar}>+</button>
-          <button onClick={restar}>-</button>
-        </div>
+      <div>
+        <button onClick={sumar}>+</button>
+        <button onClick={restar}>-</button>
+      </div>
       <button>AGREGAR</button>
     </div>
-  )
-}
+  );
+};
 
 export default ItemCount;

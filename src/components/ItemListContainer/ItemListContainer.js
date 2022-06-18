@@ -2,8 +2,6 @@ import { style } from "@mui/system";
 import React, { useState, useEffect } from "react";
 import "./ItemListContainer.css";
 
-// import { Productos } from '../Data';
-
 import ItemList from "../ItemList/ItemList";
 
 function ItemListContainer() {
@@ -24,9 +22,6 @@ function ItemListContainer() {
           users ? <ItemList items={ users } /> : "No hay users..."
         }
 
-        {/* <div key={idx}>  
-        {Productos.map( (producto, idx) => <Item data={producto} /> )}
-        </div> */}
       </div>
     </>
   );

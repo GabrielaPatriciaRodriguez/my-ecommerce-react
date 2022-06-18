@@ -1,13 +1,11 @@
-
-
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const CartWidget = () => {
   return (
-      <>
-        <ShoppingCartIcon />
-        <span>1</span>
-      </>
+    <>
+      <ShoppingCartIcon />
+      <span>1</span>
+    </>
   );
 };
 

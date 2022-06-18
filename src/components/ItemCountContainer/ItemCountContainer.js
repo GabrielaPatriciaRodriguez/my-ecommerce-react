@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import "./ItemCountContainer.css";
@@ -7,21 +6,15 @@ import "./ItemCountContainer.css";
 
 import ItemCount from "../ItemCount/ItemCount";
 
-
-const ItemCountContainer = ({producto}) => {
-  
+const ItemCountContainer = ({ producto }) => {
   const { stock, name } = producto;
 
   return (
     <>
-     <p className="Producto">{name}</p>
-     <ItemCount initial={1} stock={stock}/>
+      <p className="Producto">{name}</p>
+      <ItemCount initial={1} stock={stock} />
     </>
   );
 };
-  
+
 export default ItemCountContainer;
-
- 
-
-  
