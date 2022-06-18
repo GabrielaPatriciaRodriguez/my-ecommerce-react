@@ -8,7 +8,7 @@ import Navigation from "./components/Navigation/Navigation";
 
 import ItemCountContainer from "./components/ItemCountContainer/ItemCountContainer";
 
-import ItemList from "./components/ItemList/ItemList";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 
 
@@ -38,7 +38,7 @@ const productos = [
       <ItemCountContainer producto={productos[2]} /> 
 
       <div>
-        <ItemList />
+        <ItemListContainer />
       </div>
 
 
