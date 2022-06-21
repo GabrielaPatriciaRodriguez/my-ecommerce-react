@@ -19,18 +19,18 @@ function Item({ data }) {
         <CardMedia
           component="img"
           height="200"
-          image={data.avatar_url}
+          image={data.pictureUrl}
           alt="imagen"
         />
         <CardContent>
           <Typography gutterBottom variant="h4" component="div">
-            {data.login}
+            {data.title}
           </Typography>
           <Typography gutterBottom variant="h6" component="div">
-            {data.id}
+            $ {data.price}
           </Typography>
           <Typography variant="h6" color="text.secondary">
-            {data.html_url}
+            {data.description}
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -1,28 +1,31 @@
 export const Productos = [
   {
     id: 1,
-    title: "Zapatilla Mujer",
-    description: "Confortable zapatilla de mujer",
-    price: 5500,
+    title: "Zapatilla Nike",
+    category: "Zapatilla",
+    description: "Confortable zapatilla - Variados colores y numeros",
+    price: 15500,
     pictureUrl:
       "https://res.cloudinary.com/gabycoderhouse/image/upload/v1654952479/EcommerceReact/pexels-melvin-buezo-2529148_saow29.jpg",
   },
   {
     id: 2,
-    title: "Zapatilla Hombre",
-    price: 640,
+    title: "Zapatilla Adidas",
+    category: "Zapatilla",
+    price: 16640,
     description:
-      "Zapatilla de hombre, ideal para practicar deportes de alto impacto",
+      "Zapatilla ideal para practicar deportes de alto impacto",
     pictureUrl:
-      "https://res.cloudinary.com/gabycoderhouse/image/upload/v1654952479/EcommerceReact/pexels-melvin-buezo-2529148_saow29.jpg",
+      "https://res.cloudinary.com/gabycoderhouse/image/upload/v1655845335/EcommerceReact/pexels-amar-preciado-9993285_m1etcs.jpg",
   },
   {
     id: 3,
-    title: "Zapatilla",
-    price: 1220,
-    description: "Comoda zapatilla para niños - unisex",
+    title: "Zapatilla Puma Clayde",
+    category: "Zapatilla",
+    price: 12220,
+    description: "Comoda zapatilla - Todos los colores y numeros",
     pictureUrl:
-      "https://res.cloudinary.com/gabycoderhouse/image/upload/v1654952479/EcommerceReact/pexels-melvin-buezo-2529148_saow29.jpg",
+      "https://res.cloudinary.com/gabycoderhouse/image/upload/v1655845334/EcommerceReact/pexels-suraj-b-2759783_mp66ta.jpg",
   },
 ];
 

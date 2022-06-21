@@ -11,16 +11,13 @@ const Navigation = () => {
           <a href="#/">Home</a>
         </li>
         <li>
-          <a href="#/">Hombre</a>
+          <a href="#/">Zapatillas</a>
         </li>
         <li>
-          <a href="#/">Mujer</a>
+          <a href="#/">Remeras</a>
         </li>
         <li>
-          <a href="#/">Niño</a>
-        </li>
-        <li>
-          <a href="#/">Niña</a>
+          <a href="#/">Pantalones</a>
         </li>
       </ul>
       <div>
