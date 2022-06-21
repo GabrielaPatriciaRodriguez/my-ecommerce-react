@@ -24,6 +24,7 @@ const ItemDetailContainer = () => {
   return (
     <div>
       <hr />
+      <h1>Item Detail - Desafio 6</h1>
       {loading ? (
         <div>Cargando...</div>
       ) : (
