@@ -25,3 +25,16 @@ export const Productos = [
       "https://res.cloudinary.com/gabycoderhouse/image/upload/v1654952479/EcommerceReact/pexels-melvin-buezo-2529148_saow29.jpg",
   },
 ];
+
+
+export const obtenerProductoXId = (id) =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() =>{
+      if (Productos.length>0) {
+        resolve(Productos.find(unProducto => unProducto.id === parseInt(id)))
+      } else {
+        reject("Sin datos...")
+      }
+    }, 500);
+  })
+}

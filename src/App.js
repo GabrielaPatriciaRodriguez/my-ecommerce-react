@@ -12,6 +12,8 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 
 import CardList from "./components/CardList/CardList";
 
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+
 function App() {
   const productos = [
     {
@@ -41,6 +43,10 @@ function App() {
 
       <div>
         <ItemListContainer />
+      </div>
+
+      <div>
+        <ItemDetailContainer />
       </div>
     </div>
   );
