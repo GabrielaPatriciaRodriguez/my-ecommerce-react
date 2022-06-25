@@ -1,5 +1,7 @@
 import "./Navigation.css";
 
+import { Link } from "react-router-dom";
+
 import CartWidget from "../CartWidget/CartWidget";
 
 
@@ -7,18 +9,10 @@ const Navigation = () => {
   return (
     <nav>
       <ul>
-        <li>
-          <a href="#/">Home</a>
-        </li>
-        <li>
-          <a href="#/">Zapatillas</a>
-        </li>
-        <li>
-          <a href="#/">Remeras</a>
-        </li>
-        <li>
-          <a href="#/">Pantalones</a>
-        </li>
+        <Link to="/" className="li">Home</Link>
+        <Link to="/Zapatillas" className="li">Zapatillas</Link>
+        <Link to="/Remeras" className="li">Remeras</Link>
+        <Link to="/Pantalones" className="li">Pantalones</Link>
       </ul>
       <div>
       <CartWidget />

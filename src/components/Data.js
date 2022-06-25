@@ -27,6 +27,32 @@ export const Productos = [
     pictureUrl:
       "https://res.cloudinary.com/gabycoderhouse/image/upload/v1655845334/EcommerceReact/pexels-suraj-b-2759783_mp66ta.jpg",
   },
+  {
+    id: 4,
+    title: "Remera 1",
+    category: "Remera",
+    price: 12220,
+    description: "Comoda zapatilla - Todos los colores y numeros",
+    pictureUrl:
+      "https://res.cloudinary.com/gabycoderhouse/image/upload/v1655845334/EcommerceReact/pexels-suraj-b-2759783_mp66ta.jpg",
+  },
+  {
+    id: 5,
+    title: "Remera 2",
+    category: "Remera",
+    price: 12220,
+    description: "Comoda zapatilla - Todos los colores y numeros",
+    pictureUrl:
+      "https://res.cloudinary.com/gabycoderhouse/image/upload/v1655845334/EcommerceReact/pexels-suraj-b-2759783_mp66ta.jpg",
+  },{
+    id: 6,
+    title: "Pantalon 1",
+    category: "Pantalon",
+    price: 12220,
+    description: "Comoda zapatilla - Todos los colores y numeros",
+    pictureUrl:
+      "https://res.cloudinary.com/gabycoderhouse/image/upload/v1655845334/EcommerceReact/pexels-suraj-b-2759783_mp66ta.jpg",
+  },
 ];
 
 

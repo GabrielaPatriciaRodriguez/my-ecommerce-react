@@ -10,13 +10,12 @@ nav {
     justify-content: space-evenly;
   }
   
-  li {
+  .li {
     list-style: none;
-  }
-  
-  a {
     text-decoration: none;
     color: rgb(3, 3, 29);
     padding: 20px;
   }
+  
+  
 
