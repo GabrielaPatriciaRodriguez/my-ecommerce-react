@@ -67,3 +67,6 @@ export const obtenerProductoXId = (id) =>{
     }, 500);
   })
 }
+
+
+

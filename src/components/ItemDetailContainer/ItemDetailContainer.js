@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { obtenerProductoXId } from "../Data";
 
+import { useParams } from "react-router-dom";
+
 //Components
 import ItemDetail from "../ItemDetail/ItemDetail";
 
@@ -10,7 +12,9 @@ const ItemDetailContainer = () => {
 
   const [loading, setLoading] = useState([]);
 
-  const id = 1;
+  // const id = 2;
+
+  let { id } = useParams();
 
   useEffect(() => {
     obtenerProductoXId(id)
@@ -23,8 +27,6 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      <hr />
-      <h1>Item Detail - Desafio 6</h1>
       {loading ? (
         <div>Cargando...</div>
       ) : (
@@ -40,3 +42,5 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
+
+
