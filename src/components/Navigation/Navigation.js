@@ -10,9 +10,9 @@ const Navigation = () => {
     <nav>
       <ul>
         <Link to="/" className="li">Home</Link>
-        <Link to="/Zapatillas" className="li">Zapatillas</Link>
-        <Link to="/Remeras" className="li">Remeras</Link>
-        <Link to="/Pantalones" className="li">Pantalones</Link>
+        <Link to="/Category/Zapatillas" className="li">Zapatillas</Link>
+        <Link to="/Category/Remeras" className="li">Remeras</Link>
+        <Link to="/Category/Pantalones" className="li">Pantalones</Link>
       </ul>
       <div>
       <CartWidget />

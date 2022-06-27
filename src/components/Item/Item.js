@@ -5,6 +5,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
+import { Link } from "react-router-dom";
+
 function Item({ data }) {
   const styles = {
     card: {
@@ -14,6 +16,7 @@ function Item({ data }) {
   };
 
   return (
+    <>
     <Card sx={{ maxWidth: 345 }} style={styles.card}>
       <CardActionArea>
         <CardMedia
@@ -34,7 +37,12 @@ function Item({ data }) {
           </Typography>
         </CardContent>
       </CardActionArea>
+      <Link to={`/item/${data.id}`}>
+      <button>VER DETALLE</button>
+      </Link>
+      
     </Card>
+    </>
   );
 }
 

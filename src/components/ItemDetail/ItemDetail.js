@@ -25,7 +25,6 @@ const ItemDetail = ({ title, pictureUrl, description, price }) => {
           style={styles.img}
         />
       </div>
-
       <div>
         <p> {description} </p>
         <p>$ {price} </p>

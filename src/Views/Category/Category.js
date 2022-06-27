@@ -2,26 +2,17 @@ import React, { useEffect, useState } from 'react';
 
 import "./Zapatillas.css";
 
-import { Productos } from '../../components/Data';
-
-import ItemList from '../../components/ItemList/ItemList';
+import { useParams } from 'react-router-dom';
+import ItemListContainer from '../../components/ItemListContainer/ItemListContainer';
 
 const Zapatillas = () => {
-const [zapatilla, setZapatilla] = useState([]);
-
-let idCategory = Productos.filter(palabra => palabra.category === "Zapatilla")
-
-console.log(idCategory);
-
-useEffect(() => {
-setZapatilla(idCategory)
-}, [])
+const { idCategory } = useParams();
 
   return (
     <>
-    <h1>Zapatillas</h1>
+    <h1> {idCategory} </h1>
     <div className="style">
-      {zapatilla.length > 0 ? <ItemList items={zapatilla}/> : "cargando..."} 
+      <ItemListContainer /> 
     </div>
     </>
   )

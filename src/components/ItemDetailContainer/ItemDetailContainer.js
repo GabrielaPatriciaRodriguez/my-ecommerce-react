@@ -12,8 +12,6 @@ const ItemDetailContainer = () => {
 
   const [loading, setLoading] = useState([]);
 
-  // const id = 2;
-
   let { id } = useParams();
 
   useEffect(() => {
@@ -23,7 +21,7 @@ const ItemDetailContainer = () => {
         setLoading(false);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
   return (
     <div>

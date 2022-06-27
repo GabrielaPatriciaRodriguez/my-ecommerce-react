@@ -6,9 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Views
 import Home from "./Views/Home/Home";
-import Zapatillas from "./Views/Zapatillas/Zapatillas";
-import Remeras from "./Views/Remeras/Remeras";
-import Pantalones from "./Views/Pantalones/Pantalones";
+import Category from "./Views/Category/Category";
 import DetailProduct from "./Views/DetailProduct/DetailProduct"
 
 //Components
@@ -24,10 +22,8 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Zapatillas" element={<Zapatillas/>} />
-        <Route path="/Remeras" element={<Remeras />} />
-        <Route path="/Pantalones" element={<Pantalones />} />
-        <Route path="/DetailProduct/:id" element={<DetailProduct />} />
+        <Route path="/category/:idCategory" element={<Category/>} />
+        <Route path="/item/:id" element={<DetailProduct />} />
       </Routes>
     </div>
     </Router>

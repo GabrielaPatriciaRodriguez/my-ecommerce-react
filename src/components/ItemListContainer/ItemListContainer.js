@@ -6,18 +6,25 @@ import { Productos } from "../Data";
 
 import ItemList from "../ItemList/ItemList";
 
+import { useParams } from "react-router-dom";
+
 function ItemListContainer() {
-  const [users, setUsers] = useState([]);
+  const [productos, setProductos] = useState([]);
+
+  const { idCategory } = useParams();
+
+  console.log(idCategory);
+
+  console.log(productos[0]);
 
   useEffect(() => {
-    setUsers(Productos);
-  }, []);
+    setProductos(Productos.filter(producto => idCategory ?  producto.category === idCategory : true));
+  }, [idCategory]);
 
   return (
     <>
-      <h1>Productos</h1>
       <div className="style">
-        {users.length > 0 ? <ItemList items={users} /> : "Cargando..."}
+        {productos.length > 0 ? <ItemList items={productos} /> : "Cargando..."}
       </div>
     </>
   );
