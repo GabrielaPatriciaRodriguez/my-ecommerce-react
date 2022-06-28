@@ -23,10 +23,10 @@ function Item({ data }) {
           component="img"
           height="200"
           image={data.pictureUrl}
-          alt="imagen"
+          alt={data.category} style={{objectFit: "contain"}}
         />
         <CardContent>
-          <Typography gutterBottom variant="h4" component="div">
+          <Typography gutterBottom variant="h5" component="div">
             {data.title}
           </Typography>
           <Typography gutterBottom variant="h6" component="div">
@@ -38,7 +38,11 @@ function Item({ data }) {
         </CardContent>
       </CardActionArea>
       <Link to={`/item/${data.id}`}>
-      <button>VER DETALLE</button>
+      <button style={{margin: 10, borderRadius: 15,
+      borderColor: "gray",
+      color: "whitesmoke",
+      padding: 10,
+      backgroundColor: "gray"}}>VER DETALLE</button>
       </Link>
       
     </Card>

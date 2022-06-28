@@ -21,7 +21,7 @@ export const Productos = [
   },
   {
     id: 3,
-    title: "Zapatilla Puma Clayde",
+    title: "Zapatilla Puma",
     category: "Zapatillas",
     price: 12220,
     description: "Comoda zapatilla - Todos los colores y numeros",

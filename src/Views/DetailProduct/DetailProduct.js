@@ -4,7 +4,7 @@ import ItemDetailContainer from '../../components/ItemDetailContainer/ItemDetail
 const DetailProduct = () => {
 
   return (
-    <div>
+    <div style={{display: "flex", justifyContent: "center"}}>
       <ItemDetailContainer />
     </div>
   )
