@@ -1,51 +1,48 @@
-import React from "react";
-import ItemCountContainer from "../ItemCountContainer/ItemCountContainer";
+import React, { useState } from "react";
+import "./ItemDetail.css";
 
-const ItemDetail = ({ title, pictureUrl, description, price }) => {
-  const styles = {
-    cardDetail: {
-      display: "flex",
-      backgroundColor: "whitesmoke",
-      margin: 30,
-      padding: 30,
-      maxWidth: 645,
-      borderRadius: 5,
-    },
-    img: {
-      margin: 20,
-      width: 300,
-    },
-    button: {
-      borderRadius: 15,
-      borderColor: "gray",
-      color: "whitesmoke",
-      padding: 10,
-      backgroundColor: "gray",
-    },
-    description: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: 20
-    }
+import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
+
+const ItemDetail = ({
+  title,
+  pictureUrl,
+  description,
+  price,
+  stock,
+  initial,
+}) => {
+  const [count, setCount] = useState(initial);
+
+  const [compra, setCompra] = useState(false);
+
+  const onAdd = (cant) => {
+    setCount(cant);
+    setCompra(true);
   };
   return (
-    <div style={styles.cardDetail}>
+    <div className="cardDetail">
       <div>
         <h2>{title}</h2>
         <img
           src={pictureUrl}
           alt={description}
           sx={{ maxWidth: 245 }}
-          style={styles.img}
+          className="img"
         />
       </div>
-      <div style={styles.description}>
+      <div className="description">
         <p> {description} </p>
         <p>$ {price} </p>
-        <ItemCountContainer />
-        <button style={styles.button}>AGREGAR AL CARRITO</button>
+        <p>Stock: {stock} </p>
+        <p>Cantidad comprada: {count} </p>
+        {!compra ? (
+          <ItemCount initial={count} stock={stock} onAdd={onAdd} />
+        ) : (
+          <Link to="/cart">
+            <button>Terminar Compra</button>
+          </Link>
+        )}
       </div>
     </div>
   );

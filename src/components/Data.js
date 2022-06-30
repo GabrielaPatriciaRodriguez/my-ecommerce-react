@@ -6,6 +6,7 @@ export const Productos = [
     description: "Confortable zapatilla - Variados colores y numeros",
     price: 15500,
     stock: 10,
+    initial: 1,
     pictureUrl:
       "https://res.cloudinary.com/gabycoderhouse/image/upload/v1654952479/EcommerceReact/pexels-melvin-buezo-2529148_saow29.jpg",
   },
@@ -15,6 +16,7 @@ export const Productos = [
     category: "Zapatillas",
     price: 16640,
     stock: 17,
+    initial: 1,
     description: "Zapatilla ideal para practicar deportes de alto impacto",
     pictureUrl:
       "https://res.cloudinary.com/gabycoderhouse/image/upload/v1655845335/EcommerceReact/pexels-amar-preciado-9993285_m1etcs.jpg",
@@ -26,6 +28,7 @@ export const Productos = [
     price: 12220,
     description: "Comoda zapatilla - Todos los colores y numeros",
     stock: 20,
+    initial: 1,
     pictureUrl:
       "https://res.cloudinary.com/gabycoderhouse/image/upload/v1655845334/EcommerceReact/pexels-suraj-b-2759783_mp66ta.jpg",
   },
@@ -36,6 +39,7 @@ export const Productos = [
     price: 2220,
     description: "Comoda remera - Todos los colores y numeros",
     stock: 15,
+    initial: 1,
     pictureUrl:
       "https://res.cloudinary.com/gabycoderhouse/image/upload/v1656240800/EcommerceReact/remera3_htva2w.png",
   },
@@ -46,6 +50,7 @@ export const Productos = [
     price: 3220,
     description: "Comoda remera - Todos los colores",
     stock: 7,
+    initial: 1,
     pictureUrl:
       "https://res.cloudinary.com/gabycoderhouse/image/upload/v1656240456/EcommerceReact/remera2_huhrp7.png",
   },
@@ -56,6 +61,7 @@ export const Productos = [
     price: 4220,
     description: "Comoda remera - Todos los colores y numeros",
     stock: 22,
+    initial: 1,
     pictureUrl:
     "https://res.cloudinary.com/gabycoderhouse/image/upload/v1656240800/EcommerceReact/remera3_htva2w.png",
   },
@@ -66,6 +72,7 @@ export const Productos = [
     price: 3720,
     description: "Comoda pantalon deportivo - Todos los colores y numeros",
     stock: 25,
+    initial: 1,
     pictureUrl:
     "https://res.cloudinary.com/gabycoderhouse/image/upload/v1656241373/EcommerceReact/pantalon3_xg7svd.png",
   },
@@ -76,6 +83,7 @@ export const Productos = [
     price: 3290,
     description: "Pantalon - Todos los colores y numeros",
     stock: 30,
+    initial: 1,
     pictureUrl:
     "https://res.cloudinary.com/gabycoderhouse/image/upload/v1656241373/EcommerceReact/pantalon3_xg7svd.png",
   },
@@ -86,6 +94,7 @@ export const Productos = [
     price: 4720,
     description: "Pantalon deportivo - Todos los colores y numeros",
     stock: 18,
+    initial: 1,
     pictureUrl:
       "https://res.cloudinary.com/gabycoderhouse/image/upload/v1656241194/EcommerceReact/pantalon2_ovqenj.png",
   },

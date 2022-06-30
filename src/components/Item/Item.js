@@ -17,35 +17,42 @@ function Item({ data }) {
 
   return (
     <>
-    <Card sx={{ maxWidth: 345 }} style={styles.card}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="200"
-          image={data.pictureUrl}
-          alt={data.category} style={{objectFit: "contain"}}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {data.title}
-          </Typography>
-          <Typography gutterBottom variant="h6" component="div">
-            $ {data.price}
-          </Typography>
-          <Typography variant="h6" color="text.secondary">
-            {data.description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <Link to={`/item/${data.id}`}>
-      <button style={{margin: 10, borderRadius: 15,
-      borderColor: "gray",
-      color: "whitesmoke",
-      padding: 10,
-      backgroundColor: "gray"}}>VER DETALLE</button>
-      </Link>
-      
-    </Card>
+      <Card sx={{ maxWidth: 345 }} style={styles.card}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="200"
+            image={data.pictureUrl}
+            alt={data.category}
+            style={{ objectFit: "contain" }}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {data.title}
+            </Typography>
+            <Typography gutterBottom variant="h6" component="div">
+              $ {data.price}
+            </Typography>
+            <Typography variant="h6" color="text.secondary">
+              {data.description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <Link to={`/item/${data.id}`}>
+          <button
+            style={{
+              margin: 10,
+              borderRadius: 15,
+              borderColor: "gray",
+              color: "whitesmoke",
+              padding: 10,
+              backgroundColor: "gray",
+            }}
+          >
+            VER DETALLE
+          </button>
+        </Link>
+      </Card>
     </>
   );
 }

@@ -12,6 +12,7 @@ import DetailProduct from "./Views/DetailProduct/DetailProduct"
 //Components
 
 import Navigation from "./components/Navigation/Navigation";
+import CartWidget from "./components/CartWidget/CartWidget";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/category/:idCategory" element={<Category/>} />
         <Route path="/item/:id" element={<DetailProduct />} />
+        <Route path="/cart" element={<CartWidget />} />
       </Routes>
     </div>
     </Router>
