@@ -2,7 +2,7 @@ import "./Navigation.css";
 
 import { Link } from "react-router-dom";
 
-import CartWidget from "../CartWidget/CartWidget";
+import Cart from "../Cart/Cart";
 
 const Navigation = () => {
   return (
@@ -31,7 +31,10 @@ const Navigation = () => {
         </Link>
       </ul>
       <div>
-        <CartWidget className="carrito" />
+       
+        <Cart className="carrito" />
+       
+        
       </div>
     </nav>
   );

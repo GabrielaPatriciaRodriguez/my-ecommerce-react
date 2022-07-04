@@ -13,10 +13,6 @@ function ItemListContainer() {
 
   const { idCategory } = useParams();
 
-  console.log(idCategory);
-
-  console.log(productos[0]);
-
   useEffect(() => {
     setProductos(Productos.filter(producto => idCategory ?  producto.category === idCategory : true));
   }, [idCategory]);

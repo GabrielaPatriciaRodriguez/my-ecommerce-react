@@ -3,9 +3,9 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 
-const Zapatillas = () => {
+const Category = () => {
   const { idCategory } = useParams();
-
+  
   return (
     <div>
       <h1> {idCategory} </h1>
@@ -16,4 +16,4 @@ const Zapatillas = () => {
   );
 };
 
-export default Zapatillas;
+export default Category;
