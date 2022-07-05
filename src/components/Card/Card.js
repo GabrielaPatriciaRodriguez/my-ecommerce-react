@@ -23,7 +23,10 @@ function Carta({item}) {
             {item.description}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            $ {item.price}
+            Precio Unitario: $ {item.price}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Cantidad de unidades: {item.qty}
           </Typography>
         </CardContent>
       </CardActionArea>

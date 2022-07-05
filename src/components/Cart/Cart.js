@@ -2,7 +2,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import "./Cart.css";
 
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 import { CartContext } from '../../context/CartContext';
 
