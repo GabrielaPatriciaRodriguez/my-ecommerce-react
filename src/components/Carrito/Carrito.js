@@ -1,26 +1,29 @@
-import React from 'react';
-import { useContext } from 'react';
+import { CardActionArea } from "@mui/material";
 
-import { CartContext } from '../../context/CartContext';
-import Carta from '../Card/Card';
+import { useContext } from "react";
+
+import { Link } from "react-router-dom";
+
+import { CartContext } from "../../context/CartContext";
+import Carta from "../Card/Card";
 
 const Carrito = () => {
-    const {cart, clear} = useContext(CartContext);
-
-    console.log("cart", cart)
+  const { cart } = useContext(CartContext);
 
   return (
-    <div>
-        <h1>Mi carrito</h1>
-        
-        {cart.map((item, id) => <Carta item={item} key={id} />)} 
 
-        <button onClick={() => {clear()}}>Vaciar</button>
+    <div>
+      <h1>Mi carrito</h1>
+      <div>
+      {cart.length ? cart.map((item, id) => (
+            <Carta item={item} key={id} />
+          )) : <Link to="/"><p>Carrito Vacio - Ir a Home</p></Link>} 
+      </div>
+      
+     
 
     </div>
-  )
-
-  
-}
+  );
+};
 
 export default Carrito;

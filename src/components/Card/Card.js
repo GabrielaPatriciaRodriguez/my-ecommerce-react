@@ -4,9 +4,15 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import { Button } from 'react-bootstrap';
+import { useContext } from "react";
+
+import { CartContext } from "../../context/CartContext";
 
 function Carta({item}) {
+  const { clear } = useContext(CartContext);
   return (
+    <div>
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
@@ -31,6 +37,14 @@ function Carta({item}) {
         </CardContent>
       </CardActionArea>
     </Card>
+    <button
+            onClick={() => {
+              clear();
+            }}
+          >
+            Vaciar
+          </button>
+    </div>
   );
 }
 

@@ -1,10 +1,16 @@
+import {useContext} from "react";
+
 import "./Navigation.css";
+
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import { Link } from "react-router-dom";
 
-import Cart from "../Cart/Cart";
+import { CartContext } from "../../context/CartContext";
+
 
 const Navigation = () => {
+  const { cart } = useContext(CartContext);
   return (
     <nav>
       <div>
@@ -31,10 +37,10 @@ const Navigation = () => {
         </Link>
       </ul>
       <div>
-       
-        <Cart className="carrito" />
-       
-        
+        <Link to="/cart">
+          <ShoppingCartIcon className="carrito" />
+        </Link>
+        <span>{cart.length}</span>
       </div>
     </nav>
   );
