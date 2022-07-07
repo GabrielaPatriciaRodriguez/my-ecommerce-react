@@ -36,11 +36,11 @@ const Navigation = () => {
           Pantalones
         </Link>
       </ul>
-      <div>
+      <div style={{width: 100}}>
         <Link to="/cart">
-          <ShoppingCartIcon className="carrito" />
+          <ShoppingCartIcon className="cart" />
         </Link>
-        <span>{cart.length}</span>
+        <span className="number">{cart.length}</span>
       </div>
     </nav>
   );

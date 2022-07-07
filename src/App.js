@@ -11,7 +11,7 @@ import DetailProduct from "./Views/DetailProduct/DetailProduct";
 
 //Components
 import Navigation from "./components/Navigation/Navigation";
-import Carrito from "./components/Carrito/Carrito";
+import Cart from "./components/Cart/Cart";
 
 import { CartProvider } from "./context/CartContext";
 
@@ -25,7 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/category/:idCategory" element={<Category/>} />
         <Route path="/item/:id" element={<DetailProduct />} />
-        <Route path="/cart" element={<Carrito />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
     </CartProvider>

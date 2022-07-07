@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-import Carta from "../components/Card/Card";
+
 
 import { Productos } from "../components/Data";
 
