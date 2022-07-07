@@ -6,8 +6,10 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import CartItem from "../CartItem/CartItem";
 
+import CartLleno from "./CartLleno";
+
 const Cart = () => {
-  const { cart, clear } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
   return (
 
@@ -19,13 +21,7 @@ const Cart = () => {
           )) : <Link to="/"><p>Carrito Vacio - Ir a Home</p></Link>} 
       </div>
       <div>
-      <button
-            onClick={() => {
-              clear();
-            }} style={{paddingRight: "10px"}}
-          >
-            Vaciar Carrito
-          </button>
+        {cart.length ? <CartLleno /> : null}
       </div>
     </div>
   );

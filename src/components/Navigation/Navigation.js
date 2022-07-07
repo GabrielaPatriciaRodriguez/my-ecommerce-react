@@ -1,4 +1,4 @@
-import {useContext} from "react";
+import { useContext } from "react";
 
 import "./Navigation.css";
 
@@ -10,7 +10,8 @@ import { CartContext } from "../../context/CartContext";
 
 
 const Navigation = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, totalQty } = useContext(CartContext);
+  console.log("cart", cart)
   return (
     <nav>
       <div>
@@ -36,11 +37,13 @@ const Navigation = () => {
           Pantalones
         </Link>
       </ul>
-      <div style={{width: 100}}>
+      <div style={{ width: 100 }}>
         <Link to="/cart">
           <ShoppingCartIcon className="cart" />
         </Link>
-        <span className="number">{cart.length}</span>
+        <span className={totalQty() > 0 ? "number" : null}>
+          {totalQty() > 0 ? totalQty() : null}
+        </span>
       </div>
     </nav>
   );
