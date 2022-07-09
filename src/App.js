@@ -13,7 +13,9 @@ import DetailProduct from "./Views/DetailProduct/DetailProduct";
 import Navigation from "./components/Navigation/Navigation";
 import Cart from "./components/Cart/Cart";
 
+//Contexto
 import { CartProvider } from "./context/CartContext";
+
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/category/:idCategory" element={<Category/>} />
+        {/* <Route path="/category/:idCategory" element={<Category/>} /> */}
         <Route path="/item/:id" element={<DetailProduct />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>

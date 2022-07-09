@@ -22,7 +22,7 @@ function Item({ data }) {
           <CardMedia
             component="img"
             height="200"
-            image={data.pictureUrl}
+            image={data.image}
             alt={data.category}
             style={{ objectFit: "contain" }}
           />

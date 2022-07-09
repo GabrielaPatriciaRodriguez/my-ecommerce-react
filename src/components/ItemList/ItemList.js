@@ -7,8 +7,8 @@ import Item from "../Item/Item";
 const ItemList = ({ items }) => {
   return (
     <>
-      {items.map((user) => (
-        <Item key={user.id} data={user} />
+      {items.map((producto) => (
+        <Item key={producto.id} data={producto} />
       ))}
     </>
   );
