@@ -7,9 +7,10 @@ import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({
+  category,
   id,
   title,
-  pictureUrl,
+  image,
   description,
   price,
   stock,
@@ -29,8 +30,9 @@ const ItemDetail = ({
     <div className="cardDetail">
       <div>
         <h2>{title}</h2>
+        <h3>{category}</h3>
         <img
-          src={pictureUrl}
+          src={image}
           alt={description}
           sx={{ maxWidth: 245 }}
           className="img"
@@ -38,6 +40,7 @@ const ItemDetail = ({
       </div>
       <div className="description">
         <p> {description} </p>
+        <p>Categoria: {category} </p>
         <p>$ {price} </p>
         <p>Stock: {stock} </p>
         <p>Cantidad comprada: {count} </p>
@@ -50,7 +53,7 @@ const ItemDetail = ({
                 addCart({
                   id,
                   title,
-                  pictureUrl,
+                  image,
                   description,
                   price,
                   stock,

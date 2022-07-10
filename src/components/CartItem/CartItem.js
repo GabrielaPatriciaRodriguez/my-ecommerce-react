@@ -25,7 +25,7 @@ function CartItem({ item }) {
       }}
     >
       <img
-        src={item.pictureUrl}
+        src={item.image}
         style={{ height: "160px", paddingLeft: "10px" }}
       />
       <h3>{item.title}</h3>

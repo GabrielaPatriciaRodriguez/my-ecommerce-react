@@ -31,6 +31,9 @@ function Item({ data }) {
               {data.title}
             </Typography>
             <Typography gutterBottom variant="h6" component="div">
+              Categoria: {data.category}
+            </Typography>
+            <Typography gutterBottom variant="h6" component="div">
               $ {data.price}
             </Typography>
             <Typography variant="h6" color="text.secondary">
