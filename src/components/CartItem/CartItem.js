@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { ButtonBase, getTableSortLabelUtilityClass } from "@mui/material";
+import { ButtonBase } from "@mui/material";
 import { useContext } from "react";
 
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
@@ -24,10 +24,7 @@ function CartItem({ item }) {
         border: "1px solid black",
       }}
     >
-      <img
-        src={item.image}
-        style={{ height: "160px", paddingLeft: "10px" }}
-      />
+      <img src={item.image} style={{ height: "160px", paddingLeft: "10px" }} />
       <h3>{item.title}</h3>
       <h4>Precio Unitario:${item.price}</h4>
       <h4>Cantidad: {item.qty}</h4>

@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { CartContext } from "../../context/CartContext";
 
@@ -14,6 +15,11 @@ const CartLleno = () => {
             }} style={{margin: "10px"}}>VACIAR CARRITO</Button>
 
       <p>Total Carrito ${getTotal()} </p>
+
+            <Link to="/checkout">
+            <Button variant="contained" color="success" >FINALIZAR COMPRA</Button>
+            </Link>
+      
     </div>
   );
 };
