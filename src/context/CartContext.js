@@ -1,10 +1,10 @@
 import { createContext, useState } from "react";
 
-import { Productos } from "../components/Data";
+// import { Productos } from "../components/Data";
 
 export const CartContext = createContext();
 
-const initialState = Productos;
+// const initialState = Productos;
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);

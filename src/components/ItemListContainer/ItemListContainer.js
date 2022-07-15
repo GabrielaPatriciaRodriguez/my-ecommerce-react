@@ -7,20 +7,25 @@ import ItemList from "../ItemList/ItemList";
 
 //Firebase
 import { db } from "../../Firebase/FirebaseConfig";
-import { collection, query, getDocs } from "firebase/firestore";
+import { collection, query, getDocs, where } from "firebase/firestore";
+import { useParams } from "react-router-dom";
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);
 
+  const { category } = useParams();
+
   const getProductos = async () => {
-    const q = query(collection(db, "products"));
+    const q = category
+      ? query(collection(db, "products"), where("category", "==", category))
+      : query(collection(db, "products"));
     const querySnapshot = await getDocs(q);
     const docs = [];
     console.log(querySnapshot);
 
     querySnapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
+      //console.log(doc.id, " => ", doc.data());
       docs.push({ ...doc.data(), id: doc.id });
     });
     setProductos(docs);
@@ -28,7 +33,7 @@ function ItemListContainer() {
 
   useEffect(() => {
     getProductos();
-  }, []);
+  }, [category]);
 
   return (
     <>

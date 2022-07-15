@@ -6,11 +6,13 @@ import MensajeCompra from "../MensajeCompra/MensajeCompra";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 //Firebase
 import { db } from "../../Firebase/FirebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
+
+import { CartContext } from "../../context/CartContext";
 
 const initialState = {
   name: "",
@@ -19,11 +21,11 @@ const initialState = {
 };
 
 const Formulario = () => {
+  const { cart, clear, getTotal } = useContext(CartContext);
+  
   const [values, setValues] = useState(initialState);
 
   const [purchasesId, setPurchasesId] = useState("");
-
-  console.log(values);
 
   const handlerOnChange = (e) => {
     const { value, name } = e.target;
@@ -32,20 +34,30 @@ const Formulario = () => {
 
   const onSubmit = async (e) => {
     // e.preventDefault();
-    console.log(values);
     // Add a new document with a generated id.
-    const docRef = await addDoc(collection(db, "purchases"), {
-      values,
-    });
+    const data = {
+      buyer: values,
+      items: cart.map(item => {
+        return{
+          id: item.id,
+          title: item.title,
+          price: item.price
+        }
+      }),
+      date: Date.now(),
+      total: getTotal(),
+     }
+    const docRef = await addDoc(collection(db, "purchases"),data)
     console.log("Document written with ID: ", docRef.id);
     setPurchasesId(docRef.id);
     setValues(initialState);
+    clear()
   };
 
   return (
     <div>
       <h1>Complete este formulario para finalizar la compra</h1>
-      <FormControl style={{ margin: 10 }} onSubmit={onSubmit}>
+      <FormControl style={{ margin: 10 }}>
         <TextField
           style={{ margin: 10, width: 450 }}
           id="outlined-basic"
@@ -82,8 +94,9 @@ const Formulario = () => {
           }}
           variant="contained"
           endIcon={<SendIcon />}
+          disabled={purchasesId!==''}
         >
-          Send
+          Enviar
         </Button>
       </FormControl>
       {purchasesId && <MensajeCompra purchasesId={purchasesId} />}

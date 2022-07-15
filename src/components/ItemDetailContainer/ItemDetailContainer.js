@@ -10,11 +10,8 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 //Firebase
 import { db } from "../../Firebase/FirebaseConfig";
 import {
-  collection,
-  query,
-  getDocs,
-  documentId,
-  where,
+  getDoc,
+  doc,
 } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
@@ -24,25 +21,20 @@ const ItemDetailContainer = () => {
 
   let { id } = useParams();
 
-  useEffect(() => {
-    const getProduct = async () => {
-      const q = query(
-        collection(db, "products"),
-        where(documentId(), "==", id)
-      );
-      const querySnapshot = await getDocs(q);
-      const docs = [];
+  const getProduct= async (id) => {
+    const document = doc(db, "products", id)
+    const response = await getDoc(document)
+    const result = {id: response.id, ...response.data()}
+    return result
+  }
 
-      querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
-        docs.push({ ...doc.data(), id: doc.id });
-      });
-      setProduct(docs);
-      console.log(setProduct);
-    };
-    getProduct();
-    setLoading(false);
+  useEffect(() => {
+
+    getProduct(id).then((doc) => {
+      setProduct(doc);
+      setLoading(false);
+    })
+
   }, [id]);
 
   return (
@@ -50,18 +42,16 @@ const ItemDetailContainer = () => {
       {loading ? (
         <div>Cargando...</div>
       ) : (
-        product.map((data) => {
-          return (
             <ItemDetail
-              image={data.image}
-              title={data.title}
-              initial={data.initial}
-              stock={data.stock}
-              price={data.price}
-              category={data.category}
+              id={product.id}
+              image={product.image}
+              title={product.title}
+              initial={product.initial}
+              description={product.description}
+              stock={product.stock}
+              price={product.price}
+              category={product.category}
             />
-          );
-        })
       )}
     </div>
   );
