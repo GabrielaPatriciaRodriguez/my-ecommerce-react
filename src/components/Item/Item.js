@@ -12,6 +12,7 @@ function Item({ data }) {
     card: {
       margin: 20,
       width: 500,
+      padding: 15,
     },
   };
 
@@ -31,13 +32,7 @@ function Item({ data }) {
               {data.title}
             </Typography>
             <Typography gutterBottom variant="h6" component="div">
-              Categoria: {data.category}
-            </Typography>
-            <Typography gutterBottom variant="h6" component="div">
               $ {data.price}
-            </Typography>
-            <Typography variant="h6" color="text.secondary">
-              {data.description}
             </Typography>
           </CardContent>
         </CardActionArea>

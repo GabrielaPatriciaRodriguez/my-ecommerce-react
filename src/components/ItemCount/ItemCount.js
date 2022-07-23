@@ -1,8 +1,10 @@
 import React from "react";
 
 import "./ItemCount.css";
+import BasicAlerts from "../BasicAlert/BasicAlert";
 
 import { useState } from "react";
+
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -11,7 +13,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     if (count < stock) {
       setCount(count + 1);
     } else {
-      alert("No tenemos stock");
+      console.log("No tenemos stock");
     }
   };
 
@@ -32,6 +34,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <input value={count} onChange={onChangeCount} />
         <button onClick={restar}>-</button>
       </form>
+      {(count === stock) ? <BasicAlerts /> : null}
       <button className="button" onClick={() => onAdd(count)}>
         Agregar al carrito
       </button>

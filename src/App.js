@@ -8,7 +8,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Views/Home/Home";
 import Category from "./Views/Category/Category";
 import DetailProduct from "./Views/DetailProduct/DetailProduct";
-import Checkout from "./Views/Checkout/Checkout";
 
 //Components
 import Navigation from "./components/Navigation/Navigation";
