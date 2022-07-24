@@ -13,7 +13,7 @@ const MensajeCompra = ({ purchasesId }) => {
         marginTop: 40,
       }}
     >
-      <Stack sx={{ width: "50%" }} spacing={2}>
+      <Stack sx={{ width: 300 }} spacing={2}>
         <Alert severity="success">
           Gracias por su compra. Su Codigo de Transaccion es {purchasesId}
         </Alert>

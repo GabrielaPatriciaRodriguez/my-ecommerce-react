@@ -1,0 +1,19 @@
+.itemCart{
+    width: auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr 2fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "imagen, titulo, precioUnitario, cantidad, precioTotal";
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 20px
+}
+
+@media screen and (max-width: 425px){
+    .itemCart{
+        display: flex;
+        flex-direction: column;
+    }
+}

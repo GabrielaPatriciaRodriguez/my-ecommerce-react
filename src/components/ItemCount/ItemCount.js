@@ -30,9 +30,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   return (
     <>
       <form onSubmit={(e) => e.preventDefault()}>
-        <button onClick={sumar}>+</button>
-        <input value={count} onChange={onChangeCount} />
         <button onClick={restar}>-</button>
+        <input value={count} onChange={onChangeCount} style={{width: 20, margin: 5}} />
+        <button onClick={sumar}>+</button>
       </form>
       {(count === stock) ? <BasicAlerts /> : null}
       <button className="button" onClick={() => onAdd(count)}>

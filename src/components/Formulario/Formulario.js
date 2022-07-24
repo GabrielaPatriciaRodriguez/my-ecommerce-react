@@ -57,9 +57,9 @@ const Formulario = () => {
   return (
     <div>
       <h1>Complete este formulario para finalizar la compra</h1>
-      <FormControl style={{ margin: 10 }}>
+      <FormControl >
         <TextField
-          style={{ margin: 10, width: 450 }}
+          style={{ margin: 10, width: 290 }}
           id="outlined-basic"
           label="nombre"
           variant="outlined"

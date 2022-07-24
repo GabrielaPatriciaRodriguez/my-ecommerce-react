@@ -3,31 +3,37 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { CartContext } from "../../context/CartContext";
+import "./Cart.css";
 
 const CartLleno = () => {
   const { clear, getTotal } = useContext(CartContext);
 
   return (
-
     <div>
-        <Button variant="outlined" color="error" onClick={() => {
-              clear();
-            }} style={{margin: "10px"}}>VACIAR CARRITO</Button>
+      <Link to="/" className="link">
+        <Button variant="outlined">Continuar comprando</Button>
+      </Link>
 
       <p>Total Carrito ${getTotal()} </p>
 
       <div>
-      <Link to="/">
-            <Button variant="contained" color="success" >Continuar comprando</Button>
-            </Link>
+        <Button
+          variant="outlined"
+          color="error"
+          onClick={() => {
+            clear();
+          }}
+          style={{ margin: "10px" }}
+        >
+          VACIAR CARRITO
+        </Button>
 
-      <Link to="/checkout">
-            <Button variant="contained" color="success" >FINALIZAR COMPRA</Button>
-            </Link>
+        <Link to="/checkout" className="link">
+          <Button variant="contained" color="success">
+            FINALIZAR COMPRA
+          </Button>
+        </Link>
       </div>
-
-           
-      
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./CartItem.css";
 
 import { ButtonBase } from "@mui/material";
 import { useContext } from "react";
@@ -11,18 +12,7 @@ function CartItem({ item }) {
   const { removeItem, getTotal } = useContext(CartContext);
   return (
     <div
-      style={{
-        width: "auto",
-        display: "grid",
-        gridTemplateColumns: "2fr 3fr 3fr 2fr 2fr 1fr",
-        gridTemplateRows: "auto",
-        gridTemplateAreas:
-          "imagen, titulo, precioUnitario, cantidad, precioTotal",
-        alignContent: "center",
-        alignItems: "center",
-        padding: "20px",
-        border: "1px solid black",
-      }}
+     className="itemCart"
     >
       <img src={item.image} style={{ height: "160px", paddingLeft: "10px" }} />
       <h3>{item.title}</h3>

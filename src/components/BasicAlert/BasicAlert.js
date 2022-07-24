@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 
 const BasicAlerts = () => {
   return (
-    <Stack sx={{ width: '100%' }} spacing={2}>
+    <Stack sx={{ width: '80%' }} spacing={2}>
       <Alert severity="info">No tenemos stock!</Alert>
     </Stack>
   );

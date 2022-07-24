@@ -43,7 +43,6 @@ const ItemDetail = ({
         <p>Categoria: {category} </p>
         <p>$ {price} </p>
         <p>Stock: {stock} </p>
-        {/* <p>Cantidad comprada: {count} </p> */}
         {!compra ? (
           <ItemCount initial={count} stock={stock} onAdd={onAdd} />
         ) : (

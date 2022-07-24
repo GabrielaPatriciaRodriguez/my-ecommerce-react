@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-// import { obtenerProductoXId } from "../Data";
-
 import { useParams } from "react-router-dom";
 
 //Components
 import ItemDetail from "../ItemDetail/ItemDetail";
+import Spinner from "../Spinner/Spinner";
 
 //Firebase
 import { db } from "../../Firebase/FirebaseConfig";
@@ -40,7 +39,7 @@ const ItemDetailContainer = () => {
   return (
     <div>
       {loading ? (
-        <div>Cargando...</div>
+        <Spinner />
       ) : (
             <ItemDetail
               id={product.id}
