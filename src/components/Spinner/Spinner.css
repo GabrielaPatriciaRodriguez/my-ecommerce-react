@@ -1,0 +1,18 @@
+
+.Spinner{
+    border: 4px solid rgba(0, 0, 0, .1);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation: spin 1s linear infinite;
+    background-image: url(https://res.cloudinary.com/gabycoderhouse/image/upload/v1656361108/EcommerceReact/logo_2_sykshi.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}

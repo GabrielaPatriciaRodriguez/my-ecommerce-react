@@ -1,6 +1,33 @@
 .style {
     display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+.estilo{
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    justify-items: center;
+    gap: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    .style {
+      background-color: green;
+     
+    }
+    .estilo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .style {
+      background-color: rgb(220, 160, 19);
+    }
+    .estilo{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+  }

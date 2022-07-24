@@ -1,8 +1,7 @@
 nav {
   background-color: whitesmoke;
-  padding: 2px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 ul {
@@ -35,4 +34,25 @@ ul {
 
 .number{
   font-size: 10px;
+}
+
+@media screen and (max-width: 425px) {
+  nav {
+    background-color: rgb(220, 160, 19);
+    width: 100%;
+    justify-content: center;
+  }
+  .li{
+    padding: 2px;
+    padding-top: 15px;
+    font-size: 10px;
+  }
+  .logo{
+    padding: 2px;
+    width: 60px;
+    height: 60px;
+  }
+  .cart{
+    padding-top: 20px;
+  }
 }

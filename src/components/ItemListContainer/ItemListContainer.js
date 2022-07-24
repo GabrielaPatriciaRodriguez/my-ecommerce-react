@@ -4,6 +4,7 @@ import "./ItemListContainer.css";
 
 //Component
 import ItemList from "../ItemList/ItemList";
+import Spinner from "../Spinner/Spinner";
 
 //Firebase
 import { db } from "../../Firebase/FirebaseConfig";
@@ -36,11 +37,11 @@ function ItemListContainer() {
   }, [category]);
 
   return (
-    <>
-      <div className="style">
-        {productos.length > 0 ? <ItemList items={productos} /> : "Cargando..."}
+    <div className="style">
+      <div className="estilo">
+        {productos.length > 0 ? <ItemList items={productos} /> : <Spinner />}
       </div>
-    </>
+    </div>
   );
 }
 

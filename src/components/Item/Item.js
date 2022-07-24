@@ -8,21 +8,14 @@ import { CardActionArea } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function Item({ data }) {
-  const styles = {
-    card: {
-      margin: 20,
-      width: 500,
-      padding: 15,
-    },
-  };
-
   return (
     <>
-      <Card sx={{ maxWidth: 345 }} style={styles.card}>
+      <Card sx={{ maxWidth: 300, marginTop: 5}}>
         <CardActionArea>
           <CardMedia
             component="img"
             height="200"
+            width="200"
             image={data.image}
             alt={data.category}
             style={{ objectFit: "contain" }}

@@ -36,7 +36,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       </form>
       {(count === stock) ? <BasicAlerts /> : null}
       <button className="button" onClick={() => onAdd(count)}>
-        Agregar al carrito
+        Agregar
       </button>
     </>
   );

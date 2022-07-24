@@ -16,9 +16,17 @@ const CartLleno = () => {
 
       <p>Total Carrito ${getTotal()} </p>
 
-            <Link to="/checkout">
+      <div>
+      <Link to="/">
+            <Button variant="contained" color="success" >Continuar comprando</Button>
+            </Link>
+
+      <Link to="/checkout">
             <Button variant="contained" color="success" >FINALIZAR COMPRA</Button>
             </Link>
+      </div>
+
+           
       
     </div>
   );
