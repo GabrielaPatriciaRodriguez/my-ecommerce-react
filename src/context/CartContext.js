@@ -42,20 +42,8 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeItem = (itemId) => {
-    const findProduct = cart.find((item) => item.id === itemId);
-    if (findProduct.qty > 1) {
-      //logica para disminuir la cantidad
-      const newCartSinUnidadProd = cart.map((item) => {
-        if (item.id === itemId) {
-          return { ...item, qty: item.qty - 1 };
-        }
-        return item;
-      });
-      setCart(newCartSinUnidadProd);
-    } else {
-      const cartSinProducto = cart.filter((item) => item.id !== itemId);
-      setCart(cartSinProducto);
-    }
+    const cartSinProducto = cart.filter((item) => item.id !== itemId);
+    setCart(cartSinProducto);
   };
 
   const totalQty = () => {
