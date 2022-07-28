@@ -5,6 +5,7 @@ import "./ItemListContainer.css";
 //Component
 import ItemList from "../ItemList/ItemList";
 import Spinner from "../Spinner/Spinner";
+import Footer from "../Footer/Footer";
 
 //Firebase
 import { db } from "../../Firebase/FirebaseConfig";
@@ -37,11 +38,14 @@ function ItemListContainer() {
   }, [category]);
 
   return (
+    <>
     <div className="style">
       <div className="estilo">
         {productos.length > 0 ? <ItemList items={productos} /> : <Spinner />}
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 
