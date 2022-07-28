@@ -14,7 +14,6 @@ Las dependencias que se utilizaron para este proyecto son:
 
 - Firebase.
 - Material UI.
-- Axios.
 
 ###
 
