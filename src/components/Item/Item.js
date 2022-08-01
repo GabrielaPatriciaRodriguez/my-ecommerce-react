@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { Button, CardActionArea } from "@mui/material";
 
 import { Link } from "react-router-dom";
 
@@ -27,8 +27,8 @@ function Item({ data }) {
             <Typography gutterBottom variant="h6" component="div">
               $ {data.price}
             </Typography>
-            <Link to={`/item/${data.id}`}>
-          <button
+            <Link to={`/item/${data.id}`} style={{ textDecoration: "none",}}>
+          <Button
             style={{
               margin: 10,
               borderRadius: 15,
@@ -38,8 +38,8 @@ function Item({ data }) {
               backgroundColor: "gray",
             }}
           >
-            VER DETALLE
-          </button>
+            p
+          </Button>
         </Link>
           </CardContent>
         </CardActionArea>

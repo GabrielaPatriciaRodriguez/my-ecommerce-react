@@ -4,6 +4,7 @@ import "./ItemCount.css";
 import BasicAlerts from "../BasicAlert/BasicAlert";
 
 import { useState } from "react";
+import { Button } from "@mui/material";
 
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -35,9 +36,17 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <button onClick={sumar}>+</button>
       </form>
       {(count === stock) ? <BasicAlerts /> : null}
-      <button className="button" onClick={() => onAdd(count)}>
+      <Button style={{
+              textDecoration: "none",
+              margin: 10,
+              borderRadius: 15,
+              borderColor: "gray",
+              color: "whitesmoke",
+              padding: 10,
+              backgroundColor: "gray",
+            }} onClick={() => onAdd(count)}>
         Agregar
-      </button>
+      </Button>
     </>
   );
 };

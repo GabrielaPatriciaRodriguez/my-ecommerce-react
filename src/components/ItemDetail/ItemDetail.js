@@ -5,6 +5,7 @@ import { CartContext } from "../../context/CartContext";
 
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const ItemDetail = ({
   category,
@@ -56,11 +57,18 @@ const ItemDetail = ({
         {!compra ? (
           <ItemCount initial={count} stock={stock} onAdd={onAdd} />
         ) : (
-          <Link to="/cart">
-            <button className="button"
+          <Link to="/cart" style={{textDecoration: "none",}}>
+            <Button style={{
+              margin: 10,
+              borderRadius: 15,
+              borderColor: "gray",
+              color: "whitesmoke",
+              padding: 10,
+              backgroundColor: "gray",
+            }}
             >
               Ir al carrito
-            </button>
+            </Button>
           </Link>
         )}
        
