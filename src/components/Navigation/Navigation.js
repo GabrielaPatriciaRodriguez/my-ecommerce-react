@@ -9,8 +9,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
 const Navigation = () => {
-  const { cart, totalQty } = useContext(CartContext);
-  console.log("cart", cart);
+  const { totalQty } = useContext(CartContext);
   return (
     <nav>
       <div>

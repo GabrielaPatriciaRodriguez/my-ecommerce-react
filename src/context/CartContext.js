@@ -1,10 +1,6 @@
 import { createContext, useState } from "react";
 
-// import { Productos } from "../components/Data";
-
 export const CartContext = createContext();
-
-// const initialState = Productos;
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
@@ -17,12 +13,6 @@ export const CartProvider = ({ children }) => {
   const addCart = (itemCart) => {
     //Logica para agregar al carrito
     setCart([...cart]);
-    //Busco si existe el producto
-    //Si existe tengo que recorrer con un map
-    //Cuando coincida tengo que cambiar el valor
-    //Si no existe hago un push con el nuevo item
-
-    // const existeProducto= cart.find((item => item.id === itemCart.id))
 
     if (isInCart(itemCart.id)) {
       const cartActualizado = cart.map((item) => {
@@ -48,8 +38,6 @@ export const CartProvider = ({ children }) => {
 
   const totalQty = () => {
     const total = cart.map((item) => item.qty).reduce((a, b) => a + b, 0);
-
-    console.log("total cantidad", total);
     return total;
   };
 

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function Item({ data }) {
   return (
     <>
-      <Card sx={{ maxWidth: 300, marginTop: 5}}>
+      <Card sx={{ maxWidth: 300, marginTop: 5 }}>
         <CardActionArea>
           <CardMedia
             component="img"
@@ -27,9 +27,7 @@ function Item({ data }) {
             <Typography gutterBottom variant="h6" component="div">
               $ {data.price}
             </Typography>
-          </CardContent>
-        </CardActionArea>
-        <Link to={`/item/${data.id}`}>
+            <Link to={`/item/${data.id}`}>
           <button
             style={{
               margin: 10,
@@ -43,6 +41,8 @@ function Item({ data }) {
             VER DETALLE
           </button>
         </Link>
+          </CardContent>
+        </CardActionArea>
       </Card>
     </>
   );

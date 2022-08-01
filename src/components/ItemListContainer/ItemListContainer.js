@@ -23,11 +23,8 @@ function ItemListContainer() {
       : query(collection(db, "products"));
     const querySnapshot = await getDocs(q);
     const docs = [];
-    console.log(querySnapshot);
 
     querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
-      //console.log(doc.id, " => ", doc.data());
       docs.push({ ...doc.data(), id: doc.id });
     });
     setProductos(docs);

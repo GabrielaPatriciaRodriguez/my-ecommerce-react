@@ -9,7 +9,7 @@ import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { CartContext } from "../../context/CartContext";
 
 function CartItem({ item }) {
-  const { removeItem, getTotal } = useContext(CartContext);
+  const { removeItem } = useContext(CartContext);
   return (
     <div
      className="itemCart"
@@ -27,8 +27,6 @@ function CartItem({ item }) {
       >
         <DeleteOutlinedIcon />
       </ButtonBase>
-
-      <p>Total ${getTotal()} </p>
     </div>
   );
 }

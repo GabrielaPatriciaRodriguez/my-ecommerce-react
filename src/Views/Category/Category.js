@@ -5,11 +5,9 @@ import ItemListContainer from "../../components/ItemListContainer/ItemListContai
 
 const Category = () => {
   return (
-    <>
-      <div className="style">
+    <div>
         <ItemListContainer />
-      </div>
-    </>
+    </div>
   );
 
 };

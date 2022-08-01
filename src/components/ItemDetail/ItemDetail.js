@@ -25,6 +25,16 @@ const ItemDetail = ({
   const onAdd = (cant) => {
     setCount(cant);
     setCompra(true);
+    addCart({
+      id,
+      title,
+      image,
+      description,
+      price,
+      stock,
+      initial,
+      qty: cant,
+    });
   };
   return (
     <div className="cardDetail">
@@ -48,20 +58,8 @@ const ItemDetail = ({
         ) : (
           <Link to="/cart">
             <button className="button"
-              onClick={() => {
-                addCart({
-                  id,
-                  title,
-                  image,
-                  description,
-                  price,
-                  stock,
-                  initial,
-                  qty: count,
-                });
-              }}
             >
-              Agregar al carrito
+              Ir al carrito
             </button>
           </Link>
         )}

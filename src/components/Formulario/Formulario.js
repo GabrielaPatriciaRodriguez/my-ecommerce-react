@@ -33,8 +33,6 @@ const Formulario = () => {
   };
 
   const onSubmit = async (e) => {
-    // e.preventDefault();
-    // Add a new document with a generated id.
     const data = {
       buyer: values,
       items: cart.map(item => {
@@ -48,7 +46,6 @@ const Formulario = () => {
       total: getTotal(),
      }
     const docRef = await addDoc(collection(db, "purchases"),data)
-    console.log("Document written with ID: ", docRef.id);
     setPurchasesId(docRef.id);
     setValues(initialState);
     clear()
@@ -59,6 +56,7 @@ const Formulario = () => {
       <h1>Complete este formulario para finalizar la compra</h1>
       <FormControl >
         <TextField
+          required
           style={{ margin: 10, width: 290 }}
           id="outlined-basic"
           label="nombre"
@@ -69,6 +67,7 @@ const Formulario = () => {
           onChange={handlerOnChange}
         />
         <TextField
+          required
           style={{ margin: 10 }}
           id="outlined-basic"
           label="telefono"
@@ -79,6 +78,7 @@ const Formulario = () => {
           onChange={handlerOnChange}
         />
         <TextField
+          required
           style={{ margin: 10 }}
           id="outlined-basic"
           label="email"
