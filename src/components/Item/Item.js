@@ -38,7 +38,7 @@ function Item({ data }) {
               backgroundColor: "gray",
             }}
           >
-            p
+            Detalle
           </Button>
         </Link>
           </CardContent>
