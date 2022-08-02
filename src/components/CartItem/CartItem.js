@@ -14,7 +14,7 @@ function CartItem({ item }) {
     <div
      className="itemCart"
     >
-      <img src={item.image} style={{ height: "160px", paddingLeft: "10px" }} />
+      <img src={item.image} alt="imagen producto" style={{ height: "160px", paddingLeft: "10px" }} />
       <h3>{item.title}</h3>
       <h4>Precio Unitario:${item.price}</h4>
       <h4>Cantidad: {item.qty}</h4>
